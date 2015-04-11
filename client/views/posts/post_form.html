@@ -1,0 +1,24 @@
+<template name="custom_post_form">
+  {{#autoForm doc=doc collection=collection id=id type=type meteormethod=meteormethod}}
+    <fieldset>
+      {{> afQuickField name='url' template="telescope" label-class="control-label" input-col-class="controls"}}
+      {{> afQuickField name='title' template="telescope" label-class="control-label" input-col-class="controls"}}
+      {{> afFieldInput name='body' type='bootstrap-wysiwyg'}}
+      {{> afQuickField name='categories' template="telescope" label-class="control-label" input-col-class="controls"}}
+      {{> afQuickField name='thumbnailUrl' template="telescope" label-class="control-label" input-col-class="controls"}}
+    </fieldset>
+    <fieldset>
+      <h3 class="fieldset-heading">Admin</h3>
+      {{> afQuickField name='postedAt' template="telescope" label-class="control-label" input-col-class="controls"}}
+      {{> afQuickField name='status' template="telescope" label-class="control-label" input-col-class="controls"}}
+      {{> afQuickField name='sticky' template="telescope" label-class="control-label" input-col-class="controls"}}
+      {{> afQuickField name='userId' template="telescope" label-class="control-label" input-col-class="controls"}}
+    </fieldset>
+    <div class="form-group">
+      <div class="control-label"></div>
+      <div class="controls">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  {{/autoForm}}
+</template>
